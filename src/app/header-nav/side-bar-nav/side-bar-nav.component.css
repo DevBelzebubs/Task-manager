@@ -1,0 +1,201 @@
+.mainContainer{
+    display: flex;
+    min-height: 100vh;
+}
+.sideBar{
+    width: 270px;
+    height: 100vh;
+    color: white;
+    position: fixed;
+    top:0;
+    left: -270px;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    background-color: rgb(49, 49, 49);
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.5) ;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+.sideBar.sidebar-visible {
+    left: 0;
+}
+.sidebarOptions{
+    display: flex;
+    flex-direction: column;
+}
+.btnErrors{
+    all: unset;
+}
+.menu-item{
+    cursor: pointer;
+}
+.sidebarMain , .sidebarViewTasks ,.menu-item , .error-401 , .error-404 , .error-500{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imgMain, .imgTasks , .imgError401 , .imgError404 , .imgError500 , .imgAlert , .imgarrowRight{
+    width: 20px;
+    height: 20px;
+}
+.imgarrowRight{
+    margin-left: 130px;
+    transition: transform 0.25s ease-in-out;
+}
+.rotated{
+    transform: rotate(90deg);
+}
+.sidebarMain , .error-401 , .error-404, .error-500{
+    margin-bottom: -20px;
+}
+.sidebarMain h4 , .sidebarViewTasks h4 , .menu-item h4 , .error-401 h4 , .error-404 h4 , .error-500 h4{
+    padding-left: 10px;
+    font-size: medium;
+}
+.btncloseSidebar{
+    all: unset;
+    background-color: rgb(32, 103, 255);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 25px;
+    position: absolute;
+    bottom: 435px;
+}
+.error-401 , .error-404, .error-500{
+    color: rgb(80, 80, 80);
+    margin-top: -10px;
+    transition: color 0.2s ease-in-out;
+}
+.error-401:hover , .error-404:hover, .error-500:hover{
+    color:white;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+.sidebarMain{
+    margin-bottom: 1px;
+    background-color: rgb(49, 49, 49);
+    transition: reversehoverElement 0.5s ease-in-out forwards;
+}
+.sidebarViewTasks{
+    margin-top: -3px;
+    margin-bottom: 1px;
+}
+.menu-item{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+@media (max-width:1024px){
+    .btncloseSidebar{
+        bottom: 400px;
+    }
+}
+.sidebarViewErrors{
+    margin-left: 30px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in, height 0.5s ease-in;
+    max-height: 0;
+}
+.moveDown{
+    animation: moveDown 0.35s ease-in forwards;
+}
+.moveUp{
+    animation: moveUp 0.5s ease-out forwards;
+}
+.sidebarViewErrors.showErrors{
+    opacity: 1;
+    max-height: 200px;
+}
+.sidebarViewErrors.hideErrors{
+    opacity: 0;
+    max-height: 200px;
+}
+.sidebarViewErrors.hideErrors .errors-container{
+    animation: slideOut 0.5s ease-in forwards;
+}
+.sidebarViewErrors.showErrors .errors-container{
+    animation: slideIn 0.5s ease-out forwards;
+}
+.sidebarMain:hover{
+    animation: hoverElement 0.5s ease-in-out forwards;
+    cursor: pointer;
+    width: 270px;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+.sidebarViewTasks:hover{
+    animation: hoverElement 0.5s ease-in-out forwards;
+    cursor: pointer;
+    width: 270px;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+.menu-item:hover{
+    animation: hoverElement 0.5s ease-in-out forwards;
+    cursor: pointer;
+    width: 270px;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+@keyframes hoverElement{
+    from{
+        background-color: rgb(49, 49, 49);
+    }to{
+        background-color: rgb(85, 85, 85);
+    }
+}
+@keyframes reversehoverElement{
+    from{
+        background-color: rgb(85, 85, 85);
+    }to{
+        background-color: rgb(49, 49, 49);
+    }
+}
+@keyframes moveDown{
+    from {
+        transform: translateY(-155px);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
+@keyframes moveUp{
+    from {
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(-155px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideOut{
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,46 @@
+.heaverNavContent{
+    display: flex;
+    background-color: rgb(49, 49, 49);
+    padding: 20px;
+    margin: -16px;
+    justify-content: space-around;
+    gap: 650px;
+    align-items: center;
+    width: 107%;
+}
+.btnExpand , .btnSearch{
+    all: unset;
+    cursor: pointer;
+}
+.menuImg{
+    all: unset;
+    width: 25px;
+    height: 25px;
+}
+.formSearch{
+    display: flex;
+    gap:10px;
+    margin-top: 10px;
+}
+.searchImg{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(32, 103, 255);
+    padding: 6px;
+    margin-left: -10px;
+    border-radius: 0px 8px 8px 0px;
+}
+.formSearchInput{
+    all:unset;
+    background-color: white;
+    color:black;
+    border-radius: 8px 0px 0px 8px;
+    padding-left: 6px;
+    margin-bottom: 4px;
+}
+.btnExpandContainer{
+    margin-top: 10px;
+}
+.formSearchInput:focus{
+    outline: 2px solid rgba(1, 116, 211, 0.767);
+}

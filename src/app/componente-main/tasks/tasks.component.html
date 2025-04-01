@@ -1,0 +1,12 @@
+<div class="appContainer">
+  <h3>{{ task.title }}</h3>
+  <div>
+    @if (task.description.length < 15){
+        <p>{{ task.description }}</p>
+    }@else {
+        <p>{{ task.mostrDesc(task)}}...</p>
+    }
+    <p>Completed: {{ task.completed }}</p>
+  </div>
+  <p>{{ task.createdAt }}</p>
+</div>

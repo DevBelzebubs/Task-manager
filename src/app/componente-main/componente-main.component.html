@@ -1,0 +1,24 @@
+<main class="mainContainer">
+    <div class="taskmannaginTop">
+        <h2>Task mannager</h2>
+        <div class="addTask">
+            <h4>Add tasks</h4>
+            <button class="btnaddTask" [routerLink]="['/enter-task']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">+</button>
+        </div>
+    </div>
+    <div class="taskmannaginMain">
+        @if (taskService.isFiltered){
+            @for (item of taskService.filteredTasks; track $index){
+                <div class="task">
+                    <app-tasks [task]="item"></app-tasks>
+                </div>
+            }
+        }@else {
+            @for (item of taskService.newtasks; track $index){
+                <div class="task">
+                    <app-tasks [task]="item"></app-tasks>
+                </div>
+            }
+        }
+    </div>
+</main>

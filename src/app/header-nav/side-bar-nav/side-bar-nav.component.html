@@ -1,0 +1,43 @@
+<div class="mainContainer">
+    <div class="overlay" *ngIf="sidebarVisible" (click)="closeSidebar()"></div>
+    <div class="sideBar" [class.sidebar-visible]="sidebarVisible">
+        <div class="sideBarContent">
+            <h2>Aplicación de notas (prueba)</h2>
+            <div class="sidebarOptions">
+                <div class="sidebarOptions-top">
+                    <div class="sidebarMain" (click)="goMain()">
+                        <img src="../assets/home.svg" class="imgMain">
+                        <h4>Main</h4>
+                    </div>
+                    <div class="sidebarViewTasks">
+                        <img src="../assets/check-board.svg" class="imgTasks">
+                        <h4>View tasks</h4>
+                    </div>
+                    <div class="menu-item" (click)="toggleSubmenu()" (click)="rotateImage()">
+                        <img src="../assets/Alert.svg" class="imgAlert">
+                        <h4 class="btnErrors">Errors</h4>
+                        <img src="../assets/chevron.png" class="imgarrowRight" [ngClass]="{'rotated':rotatedArrow}">
+                    </div>
+                </div>
+                <div class="sidebarViewErrors" 
+                     [ngClass]="{'showErrors': subMenuVisible && !animatingOut, 'hideErrors': animatingOut}">
+                    <div class="errors-container">
+                        <div class="error-401" (click)="goError401()">
+                            <img src="../assets/Error.svg" class="imgError401">
+                            <h4>Error 401</h4>
+                        </div>
+                        <div class="error-404" (click)="goError404()">
+                            <img src="../assets/404.png" class="imgError404">
+                            <h4>Error 404</h4>
+                        </div>
+                        <div class="error-500" (click)="goError500()">
+                            <img src="../assets/check-board.svg" class="imgError500">
+                            <h4>Error 500</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button (click)="closeSidebar()" class="btncloseSidebar" [ngClass]="{'moveDown': btnanimating,'moveUp': !btnanimating}">Close</button>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+*{
+    color: black;
+}
+.mainContainer{
+    position: relative;
+    left: 100px;
+    top:-910px
+}
+.addTask{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.btnaddTask{
+    all:unset;
+    background-color: rgb(32, 103, 255);
+    cursor: pointer;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.taskmannaginTop{
+    margin-left: 150px;
+}
+.task{
+    background-color: rgb(243, 243, 243);
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 4px 3px 8px 1px rgb(170, 170, 170);
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+.task:hover{
+    background-color: rgb(247, 247, 247);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+.taskmannaginMain{
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+@media(max-width: 1024px){
+    .taskmannaginTop{
+        position: absolute;
+        top:90px
+    }
+}

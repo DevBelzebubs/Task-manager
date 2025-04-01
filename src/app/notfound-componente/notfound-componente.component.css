@@ -1,0 +1,29 @@
+*{
+    color: black;
+}
+.appContainer{
+    position: absolute;
+    top: 130px;
+    left: 855px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.errorContainer img{
+    width: 400px;
+    height: 300px;
+    opacity: 0.5;
+    margin-left: -130px;
+}
+.btnGoBack{
+    all: unset;
+    background-color: rgb(32, 103, 255);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: -150px;
+}
+h4{
+    margin-left: 3px;
+}

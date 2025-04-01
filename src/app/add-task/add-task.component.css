@@ -1,0 +1,82 @@
+*{
+    color: black;
+}
+.mainContainer{
+    position: absolute;
+    top: 130px;
+    left: 575px;
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    width: 700px;
+}
+.back{
+    all: unset;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 25px;
+    background-color: rgb(32, 103, 255);
+    padding-right: 45px;
+    border-radius: 10px;
+}
+.back:hover{
+    background-color: rgb(32, 103, 255, 0.8);
+}
+.formTitle{
+    display: flex;
+    flex-direction: column;
+}
+.formDescription{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.formTitle input[type=text]{
+    all: unset;
+    padding-left:10px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    background-color: #f8f8f8;
+    transition: width 0.4s ease-in-out;
+    width: 20%;
+}
+.formTitle input[type=text]:focus{
+    width: 97.5%;
+    border: 3px solid #555;
+}
+.formDescription textarea{
+    all: unset;
+    width: 600px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    transition: height 0.4s ease-in-out;
+    height: 40px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+.formDescription textarea:focus{
+    height: 300px;
+    border: 3px solid #555;
+}
+.btnaddTask{
+    all: unset;
+    background-color: rgb(32, 103, 255, 0.8);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}

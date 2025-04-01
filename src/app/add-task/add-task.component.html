@@ -1,0 +1,21 @@
+<div class="mainContainer">
+        <a class="back" [routerLink]="['/']">
+            <img src="../assets/left-chevron.png">
+            <p>Back</p>
+        </a>
+    <div class="formContainer">
+        <form>
+            <div class="formTitle">
+                <label>Título</label>
+                <input type="text" [(ngModel)]="titleTask" name="title" required placeholder="Add title...">
+                <label></label>
+            </div>
+            <div class="formDescription">
+                <label>Descripción</label>
+                <textarea type="text" [(ngModel)]="descriptionTask" name="description" required placeholder="Add description..." (keyup.enter)="addTask()"></textarea>
+                <label></label>
+            </div>
+            <button (click)="addTask()" class="btnaddTask">Add</button>
+        </form>
+    </div>
+</div>

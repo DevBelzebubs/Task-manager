@@ -1,0 +1,16 @@
+<nav class="headerNavContainer">
+    <div class="heaverNavContent">
+        <div class="btnExpandContainer">
+            <button class="btnExpand" (click)="toggleSidebar()">
+                <img src="../assets/menu-button_icon-icons.com_72989.svg" class="menuImg">
+            </button>
+        </div>
+        <div class="formSearch">
+            <input type="text" placeholder="Buscar tarea.." class="formSearchInput" [(ngModel)]="searchTaskInput" (keyup.enter)="searchTask(searchTaskInput)">
+            <button type="button" class="btnSearch" (click)="searchTask(searchTaskInput)">
+                <img src="../assets/magnifying-glass_icon-icons.com_73497.svg" class="searchImg">
+            </button>
+        </div>
+    </div>
+</nav>
+<app-side-bar-nav [sidebarVisible]="toggleSidebarVisible" (sidebarInvisible)="onSidebarInvisible($event)"></app-side-bar-nav>
