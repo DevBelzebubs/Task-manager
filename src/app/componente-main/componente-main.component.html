@@ -14,7 +14,7 @@
                 </div>
             }
         }@else {
-            @for (item of taskService.newtasks; track $index){
+            @for (item of newtask; track $index){
                 <div class="task">
                     <app-tasks [task]="item"></app-tasks>
                 </div>

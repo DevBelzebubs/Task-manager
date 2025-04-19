@@ -13,9 +13,12 @@ export class ComponenteMainComponent {
   datePrueba!:Date;
   newtask:Task[] = []
   constructor(public taskService:TaskService){
-    
   }
   ngOnInit(){
-    this.newtask = this.taskService.listTask();
+    this.taskService.listTask().subscribe((tasks:Task[]) => {
+      this.newtask = tasks;
+      console.log(this.newtask);
+    }
+    );
   }
 }

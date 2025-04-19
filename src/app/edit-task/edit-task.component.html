@@ -1,0 +1,31 @@
+<div class="mainContainer">
+    <a class="back" [routerLink]="['/']">
+      <img src="../assets/left-chevron.png">
+      <p>Back</p>
+    </a>
+  
+    <div class="formContainer">
+      <form (ngSubmit)="editarCambios()">
+        <div class="formTitle">
+          <label for="inputTitle">Título</label>
+          <input id="inputTitle" type="text" [(ngModel)]="task.title" name="title" required placeholder="Add title..." (input)="verifyField(task)">
+          <small class="warn" *ngIf="showTitleMessage" class="warning">Título inválido</small>
+        </div>
+  
+        <div class="formDescription">
+          <label for="inputDesc">Descripción</label>
+          <textarea id="inputDesc" [(ngModel)]="task.description" name="description" required placeholder="Add description..." (input)="verifyField(task)"></textarea>
+          <small class="warn" *ngIf="showDescMessage" class="warning">Descripción inválida</small>
+        </div>
+  
+        <div style="margin-bottom: 10px;">
+          <label for="completed">¿Completado?</label>
+          <input id="completed" type="checkbox" [(ngModel)]="task.completed" name="completed" />
+        </div>
+  
+        <button class="btnaddTask" type="submit">Guardar Cambios</button>
+        <button class="btnaddTask" type="button" (click)="eliminarTarea()" style="margin-left: 10px; background-color: red;">Eliminar Tarea</button>
+      </form>
+    </div>
+  </div>
+  

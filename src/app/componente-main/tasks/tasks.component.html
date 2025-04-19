@@ -1,4 +1,4 @@
-<div class="appContainer">
+<div class="appContainer" (click)="editTask(task)">
   <h3>{{ task.title }}</h3>
   <div>
     @if (task.description.length < 15){

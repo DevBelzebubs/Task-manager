@@ -1,12 +1,15 @@
-*{
+* {
     color: black;
-}
-.mainContainer{
+    box-sizing: border-box;
+  }
+  
+  .mainContainer {
     position: absolute;
     top: 130px;
     left: 575px;
-}
-.formContainer{
+  }
+  
+  .formContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,8 +20,9 @@
     background-color: #f0f0f0;
     margin-top: 10px;
     width: 700px;
-}
-.back{
+  }
+  
+  .back {
     all: unset;
     display: flex;
     align-items: center;
@@ -27,37 +31,45 @@
     background-color: rgb(32, 103, 255);
     padding-right: 45px;
     border-radius: 10px;
-}
-.back:hover{
-    background-color: rgb(32, 103, 255, 0.8);
-}
-.formTitle{
-    display: flex;
-    flex-direction: column;
-}
-.formDescription{
+  }
+  
+  .back:hover {
+    background-color: rgba(32, 103, 255, 0.8);
+  }
+  
+  .formTitle {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-}
-.formTitle input[type=text]{
+    width: 100%;
+  }
+  
+  .formTitle input[type="text"] {
     all: unset;
-    padding-left:10px;
+    padding-left: 10px;
     border: 2px solid #ccc;
     border-radius: 2px;
     background-color: #f8f8f8;
     transition: width 0.4s ease-in-out;
     width: 20%;
-}
-.formTitle input[type=text]:focus{
+  }
+  
+  .formTitle input[type="text"]:focus {
     width: 97.5%;
     border: 3px solid #555;
-}
-.formDescription textarea{
+  }
+  
+  .formDescription {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .formDescription textarea {
     all: unset;
     width: 600px;
     padding: 5px 10px;
-    box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
@@ -68,20 +80,36 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     overflow-y: auto;
-}
-.formDescription textarea:focus{
+  }
+  
+  .formDescription textarea:focus {
     height: 300px;
     border: 3px solid #555;
-}
-.btnaddTask{
+  }
+  
+  .btnaddTask {
     all: unset;
-    background-color: rgb(32, 103, 255, 0.8);
+    background-color: rgba(32, 103, 255, 0.8);
     cursor: pointer;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 5px;
-}
-.warning{
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnaddTask:hover {
+    background-color: rgba(32, 103, 255, 1);
+  }
+  
+  .warning, .warn {
     color: red;
     font-size: 12px;
     margin-top: 5px;
-}
+  }
+  
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+  }
+  

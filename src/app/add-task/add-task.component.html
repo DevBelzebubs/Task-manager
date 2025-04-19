@@ -7,13 +7,13 @@
         <form>
             <div class="formTitle">
                 <label>Título</label>
-                <input type="text" [(ngModel)]="titleTask" name="title" required placeholder="Add title...">
-                <label></label>
+                <input id="inputTitle" type="text" [(ngModel)]="titleTask" name="title" required placeholder="Add title..." (input)="verifyField()">
+                <small class="warn" *ngIf="showTitleMessage"></small>
             </div>
             <div class="formDescription">
                 <label>Descripción</label>
-                <textarea type="text" [(ngModel)]="descriptionTask" name="description" required placeholder="Add description..." (keyup.enter)="addTask()"></textarea>
-                <label></label>
+                <textarea id="inputDesc" type="text" [(ngModel)]="descriptionTask" (input)="verifyField()" name="description" required placeholder="Add description..." (keyup.enter)="addTask()"></textarea>
+                <small class="warn" *ngIf="showDescMessage"></small>
             </div>
             <button (click)="addTask()" class="btnaddTask">Add</button>
         </form>
